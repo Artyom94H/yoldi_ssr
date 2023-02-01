@@ -12,19 +12,6 @@ const PrimaryHeader = () => {
   const { user } = useAuth();
   const { pathname } = useRouter();
 
-  const items = useMemo(() => {
-    return [
-      {
-        key: 'accounts',
-        label: (
-          <>
-            <Link href={'/'}>Список аккаунтов</Link>
-          </>
-        ),
-      },
-    ];
-  }, []);
-
   const rightSide = useMemo(() => {
     const isSignIn = pathname.includes(RouteCodes.signIn);
     const path = isSignIn ? RouteCodes.signUp : RouteCodes.signIn;
@@ -68,9 +55,8 @@ const PrimaryHeader = () => {
         <Col span={12}>
           <Row align='middle' gutter={[20, 20]} style={{ height: '100%' }}>
             <Col>
-              <Link href={RouteCodes.home || '/'}>
+              <Link href={RouteCodes.home}>
                 <Row align='middle'>
-                  {/*<Logo />*/}
                   <Image width={80} height={50} src='/assets/icons/logo.png' alt='logo' />
                 </Row>
               </Link>

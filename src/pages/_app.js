@@ -9,7 +9,6 @@ import 'antd/dist/reset.css';
 import UIHelper from '@/helpers/UIHelper';
 import AuthProvider from '@/context/auth';
 import ruRU from 'antd/locale/ru_RU';
-import { StyleProvider } from '@ant-design/cssinjs';
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

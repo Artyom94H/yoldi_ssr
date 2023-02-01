@@ -54,6 +54,7 @@ const AuthProvider = ({ children }) => {
       }
       await getUser();
     })();
+    // eslint-disable-next-line
   }, []);
 
   const logout = useCallback(async () => {
