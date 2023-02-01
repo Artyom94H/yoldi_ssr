@@ -38,7 +38,7 @@ class SEOHelper {
     });
     params.metas.push({
       name: 'og:site_name',
-      content: 'Market place',
+      content: 'Yoldi projects',
     });
     params.links.push({
       rel: 'canonical',
