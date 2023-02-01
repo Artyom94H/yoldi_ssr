@@ -1,12 +1,12 @@
-import { Button, Col, Row, Space, Dropdown, Avatar, Typography } from 'antd';
-import { useCallback, useMemo } from 'react';
+import { Button, Col, Row, Typography } from 'antd';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RouteCodes } from '@/constants/route-codes';
 import { useAuth } from '@/context/auth';
 import ResponsiveBlock from '@/components/responsive-block';
-import AccountAvatar, { AccountAvatarEdit } from '@/components/account-avatar';
-import FlexBox from '@/components/flex-box';
+import AccountAvatar from '@/components/account-avatar';
+import Image from 'next/image';
 
 const PrimaryHeader = () => {
   const { user } = useAuth();
@@ -71,7 +71,7 @@ const PrimaryHeader = () => {
               <Link href={RouteCodes.home || '/'}>
                 <Row align='middle'>
                   {/*<Logo />*/}
-                  <img src='/assets/icons/logo.png' alt='logo' />
+                  <Image width={80} height={50} src='/assets/icons/logo.png' alt='logo' />
                 </Row>
               </Link>
             </Col>
