@@ -29,9 +29,9 @@ const AccountOwnerEdit = ({ open }) => {
         </Form.Item>
         <Form.Item name='slug' label='Адрес профиля'>
           <Input
-            addonBefore={`${
+            addonBefore={<Typography.Text ellipsis={true} style={{ maxWidth: 200 }}>{`${
               window.location.origin
-            }${RouteCodes.accountsGuest.replace(':id', '')}`}
+            }${RouteCodes.accountsGuest.replace(':id', '')}`}</Typography.Text>}
             placeholder='slug'
           />
         </Form.Item>

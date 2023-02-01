@@ -12,5 +12,6 @@ export const StyledHeader = styled(Header)`
 `;
 
 export const StyledContent = styled(Content)`
+  padding-bottom: 50px;
   background-color: ${({ gray = false }) => gray ? '#E6E6E6' : '#ffffff'};
 `;
