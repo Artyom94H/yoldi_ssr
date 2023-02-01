@@ -34,7 +34,7 @@ class SEOHelper {
     });
     params.metas.push({
       property: 'og:image',
-      content: account.image,
+      content: account.image?.url,
     });
     params.metas.push({
       name: 'og:site_name',
