@@ -76,9 +76,8 @@ const AuthProvider = ({ children }) => {
         const { data } = await api.signIn({ data: values });
         await authorizeUser(data.value, redirectUrl);
       } catch (e) {
-        return Promise.reject(e);
-      } finally {
         setLoading(false);
+        return Promise.reject(e);
       }
     },
     [authorizeUser],

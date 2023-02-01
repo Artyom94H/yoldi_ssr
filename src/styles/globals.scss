@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,15 +9,15 @@
 .layout {
   min-height: 100vh;
 
-.ant-layout-header {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #E6E6E6;
-}
-.ant-layout-footer {
-  background-color: #FFFFFF;
-}
-.ant-layout-content {
-  display: flex;
-  flex-direction: column;
-}
+  .ant-layout-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .ant-layout-footer {
+    background-color: #ffffff;
+  }
+  .ant-layout-content {
+    display: flex;
+    flex-direction: column;
+  }
 }

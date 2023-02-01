@@ -17,6 +17,10 @@ export const StyledImage = styled.img`
   width: 100%;
   height: 100%;
   position: absolute;
+    
+    :hover {
+        opacity: 0;
+    }
 `;
 
 export const StyledAvatar = styled(Avatar)`
@@ -41,6 +45,9 @@ export const StyledAvatarEdit = styled.div`
   align-items: center;
   justify-content: center;
   top: 0;
+  :hover {
+    background-color: #000000;
+  }
 `;
 
 export const StyledEditWrapper = styled.div`
@@ -54,21 +61,4 @@ export const StyledUpload = styled(Upload)`
   cursor: pointer;
   top: 0;
   transition: 0.3s ease all;
-
-  :hover {
-    background-color: #000000;
-    color: #ffffff;
-    .ant-avatar {
-      display: none;
-    }
-    ${StyledAvatarEdit} {
-      background-color: #000000;
-    }
-    ${StyledLetterText} {
-      display: none !important;
-    }
-    ${StyledImage} {
-      display: none !important;
-    }
-  }
 `;

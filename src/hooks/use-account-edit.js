@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Form, notification } from 'antd';
+import { Form, message, notification } from 'antd';
 import ProfileApi from '@/libs/api/profile';
 import { useErrors } from '@/hooks/use-errors';
 import { useRouter } from 'next/router';
@@ -45,8 +45,13 @@ export const useAccountEdit = () => {
         });
         push(RouteCodes.accountOwner);
       } catch (e) {
-        console.log('Error', e);
-        setErrors([e?.response?.data?.message || '']);
+        const errorMessage = e?.response?.data?.message;
+        if (errorMessage) {
+          notification.error({
+            message: errorMessage,
+          });
+          setErrors([errorMessage]);
+        }
       } finally {
         setLoading(false);
       }
